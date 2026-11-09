@@ -22,8 +22,8 @@ namespace LAB07
                 title = value;
             }
         }
-        public DateTime RegistrationDate { get; set; } //дата регистрации
-        public DateTime ExecutionDate { get; set; } //срок исполнения
+        public DateTime RegistrationDate { get; set; } 
+        public DateTime ExecutionDate { get; set; } 
         public string Status { get; set; }
         public int Priority { get; set; }
         public Document(string title, DateTime registrationDate, DateTime executionDate, string status)
