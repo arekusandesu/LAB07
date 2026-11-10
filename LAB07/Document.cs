@@ -54,13 +54,28 @@ namespace LAB07
 
             return Priority;
         }
+        public string PriorityToString()
+        {
+            int priority = GetPriority();
+            switch (priority)
+            {
+                case 1:
+                    return "Низкий";
+                case 2:
+                    return "Средний";
+                case 3:
+                    return "Высокий";
+                default:
+                    return "Срочный";
+            }
+        }
         public override string ToString()
         {
             return $"Наименование документа: {Title}\n" +
                 $"Дата регистрации: {RegistrationDate}\n" +
                 $"Срок исполнения: {DaysToExecution} дней\n" +
                 $"Статус документа: {Status}\n" +
-                $"Приоритет: {GetPriority()}";
+                $"Приоритет: {PriorityToString()}";
         }
     }
 }
